@@ -16,6 +16,7 @@ client.on('ready', () => {
       if(message.author.bot) return;
     
       if(message.content.startsWith(prefix + "bcrole")) {
+         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
         let args = message.content.split(" ").slice(1);
     
         if(!args[0]) {
