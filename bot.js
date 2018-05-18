@@ -19,11 +19,11 @@ client.on('ready', () => {
         let args = message.content.split(" ").slice(1);
     
         if(!args[0]) {
-          message.channel.send("قم بمنشنة الرتبة | #bcrole @everyone message")
+          message.channel.send("قم بمنشنة الرتبة | *bcrole @everyone message")
             return;
         }
         if(!args[1]) {
-          message.channel.send("قم بكتابة الرسالة | #bcrole @everyone message")
+          message.channel.send("قم بكتابة الرسالة | *bcrole @everyone message")
             return;
         }
     
@@ -63,7 +63,7 @@ client.on('ready', () => {
 
 
   client.on('message', message => {
-    if (message.content.split(' ')[0] == '+bc2')
+    if (message.content.split(' ')[0] == '+all')
        message.guild.members.forEach( member => {
          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
 
