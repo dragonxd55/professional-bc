@@ -12,7 +12,7 @@ client.on('ready', () => {
 
 
     client.on('message' , message => {
-      var prefix = "*";
+      var prefix = "+";
       if(message.author.bot) return;
     
       if(message.content.startsWith(prefix + "bcrole")) {
@@ -63,7 +63,7 @@ client.on('ready', () => {
 
 
   client.on('message', message => {
-    if (message.content.split(' ')[0] == '*bc2')
+    if (message.content.split(' ')[0] == '+bc2')
        message.guild.members.forEach( member => {
          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
 
@@ -149,7 +149,7 @@ client.on('message', message => {
 
           client.on('message', message => {
             if(!message.channel.guild) return;
-  var prefix = "*";
+  var prefix = "+";
   if(message.content.startsWith(prefix + 'bc')) {
   if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
@@ -193,7 +193,7 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.s
 
 
                 client.on("message", message => {
-                     var prefix = "*";
+                     var prefix = "+";
                     if (message.content.startsWith(prefix + "bc3")) {
                                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
           let args = message.content.split(" ").slice(1);
@@ -206,13 +206,5 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.s
         };     
         });
 
-        client.on('message', message => {
-            if (true) {
-          if (message.content === '+invite') {
-                message.author.send(' رابط البوت |  https://discordapp.com/oauth2/authorize?client_id=426827600166518798&scope=bot&permissions=1937243255 ').catch(e => console.log(e.stack));
-          
-              }
-             } 
-            });
 
 client.login(process.env.BOT_TOKEN);
